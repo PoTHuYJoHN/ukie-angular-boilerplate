@@ -1,0 +1,63 @@
+<div id="js-parallax-window" class="parallax-window">
+	<div class="parallax-static-content">
+		<h1 class="title ">About<span>Us</span></h1>
+	</div>
+	<div class="overlay"></div>
+	<div id="js-parallax-background" class="parallax-background about"></div>
+</div>
+
+<main role="main">
+	<section>
+		<div class="container-fluid about__content gray">
+			<div class="row">
+				<div class="container">
+					<div class="element cWhite mt3p mb3p" ng-bind-html="page.main_text"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container about__team">
+			<div class="row">
+				<h2 class="title dark tCenter mt3p mb5p">Our <span>Founders</span></h2>
+
+				<div class="col-md-6 col-sm-12 about__team--item" ng-repeat="member in members">
+					<figure class="effect">
+						<img ng-src="{{::member.coverToken | getCover:2:'teammember' }}" alt="{{::member.name }}" title="{{::member.name }}" class="img-responsive" />
+
+						<figcaption>
+							<div class="__socials">
+								<a class="facebook" ng-if="member.note2" href="{{::member.note2 }}" target="_blank"><i class="icons icon-carleasefacebook"></i></a>
+								<a class="linkedin" ng-if="member.note3" href="{{::member.note3 }}" target="_blank"><i class="icons icon-carleaselinkedin"></i></a>
+								<a class="twitter" ng-if="member.note4" href="{{::member.note4 }}" target="_blank"><i class="icons icon-carleasetwitter"></i></a>
+							</div>
+						</figcaption>
+					</figure>
+					<div class="term__description">
+						<h4>
+							<b class="name tUp" ng-bind="::member.name"></b>
+						</h4>
+						<span class="position" ng-bind="::member.note1"></span>
+						<p class="desc" ng-bind="::member.text1"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+
+
+<script>
+	$(document).ready(function() {
+		if ($("#js-parallax-window").length) {
+			parallax();
+		}
+	});
+
+	$(window).scroll(function(e) {
+		if ($("#js-parallax-window").length) {
+			parallax();
+		}
+	});
+</script>
+

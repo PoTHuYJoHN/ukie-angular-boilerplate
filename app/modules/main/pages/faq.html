@@ -1,0 +1,47 @@
+<div id="js-parallax-window" class="parallax-window">
+	<div class="parallax-static-content">
+		<h1 class="title ">Frequently Asked<span>Questions</span></h1>
+	</div>
+	<div class="overlay"></div>
+	<div id="js-parallax-background" class="parallax-background faq"></div>
+</div>
+
+<main role="main">
+	<section class="mt3p">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-24">
+					<div class="faq-list">
+						<dl ng-repeat="faq in faqs" ng-class="{show: activeTab == _.findWhere(faqs, {id: faq.id}).id}">
+							<dt ng-click="togglerTab(_.findWhere(faqs, {id: faq.id}).id)">
+								<h4 class="tUp">
+									<b class="icon-carleasearrow-menu-li">{{ faq.note1 }}</b>
+								</h4>
+							</dt>
+							<dd>
+								<p>
+									{{ faq.text1 }}
+								</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<script>
+	$(document).ready(function() {
+		if ($("#js-parallax-window").length) {
+			parallax();
+		}
+	});
+
+	$(window).scroll(function(e) {
+		if ($("#js-parallax-window").length) {
+			parallax();
+		}
+	});
+</script>
+

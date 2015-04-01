@@ -1,0 +1,8 @@
+<div class="element form-input">
+	<label ng-if="label.length">{{::label }} {{ required != null ? "*" : "" }}:</label>
+	<div ng-if="($parent.editMode !== false && $parent.editMode !== true) || $parent.editMode">
+		<input type="text" ng-model="$parent.model" />
+		<div ng-include src="'/app/views/form/errors.html'"></div>
+	</div>
+	<div class="value" ng-if="$parent.editMode === false">{{ $parent.model.length ? $parent.model : "-" }}</div>
+</div>

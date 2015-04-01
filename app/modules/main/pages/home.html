@@ -1,0 +1,182 @@
+<div class="wrapper">
+	<div class="top-slider">
+		<div class="container-full" ng-controller="MainCtrl.slider">
+			<slider images="images"></slider>
+		</div>
+
+		<div class="slider__content top">
+			<img class="img-responsive" src="/images/logo.png" alt="Carlease" title="logo" />
+			<h1 class="title">Never Step Foot in a <span>Dealership Again</span></h1>
+			<div class="search">
+
+				<car-autocomplete idname="search"></car-autocomplete>
+			</div>
+		</div>
+
+		<div class="slider__content bottom">
+			<a href="#" class="button inline mw260 floatLeft">Why Carlease?</a>
+
+			<div class="cWhite scroll" ng-click="gotoElement('explore')">
+				<span>EXPLORE</span>
+				<i class="icon-carleasedoublearrow-down"></i>
+			</div>
+
+			<a href="#" class="button inline mw260 floatRight">Build and Find</a>
+		</div>
+	</div>
+
+	<div id="explore" class="container-fluid explore-block">
+		<div class="row">
+			<div class="container mb3p">
+				<h2 class="title tCenter dark mt2p mb2p">Explore</h2>
+
+				<div class="explore_list">
+					<div ng-include="'/app/modules/main/pages/home-makers.html'"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid advantage-block">
+		<div class="row">
+			<div class="container mb3p">
+				<h2 class="title tCenter mt3p mb5p">Carlease <span>Advantage</span></h2>
+
+				<div class="advantage__content">
+					<div class="col-md-12 padding-0">
+						<div class="element">
+							<i class="advantage__icons __icons icon-carleasesteap"></i>
+							<div class="element-inner">
+								<h3>Never Step Foot in a Dealership</h3>
+								<span>
+									At Carlease, we handle the entire transaction from lease quote through delivery of your new car to your doorstep so that you never have to step foot in a dealership. Other buying services, such as Truecar, merely provide a certificate or pass along your lead information to local dealers, requiring you to spend significant time (and often money) finalizing the deal with the local dealer.
+								</span>
+							</div>
+						</div>
+
+						<div class="element">
+							<i class="advantage__icons __icons icon-carleasepig"></i>
+							<div class="element-inner">
+								<h3>Industry Leading Prices</h3>
+								<span>
+									Because we purchases so many vehicles on behalf of our clients, we can provide industry leading prices superior to those that an individual can obtain on its own.
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12 padding-0">
+						<div class="element">
+							<i class="advantage__icons __icons icon-carleaseheart"></i>
+							<div class="element-inner">
+								<h3>We Want to Serve You for Life</h3>
+								<span>
+									At Carlease, we aim to establish life long customers by delivering great value and service lease after lease, year after year. And because we offer all makes and models, we are uniquely positioned to deliver on that promise unlike dealerships who can only offer a single vehicle manufacturer. What does this mean for you...Great prices without the haggle and headache.
+								</span>
+							</div>
+						</div>
+
+						<div class="element">
+							<i class="advantage__icons __icons icon-carleasebank"></i>
+							<div class="element-inner">
+								<h3>Banks Compete</h3>
+								<span>
+									We scan lease and finance terms across multiple banks and financiers to assure that our customers are getting the very best terms on their new lease. Try getting that from a dealer.
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-24 textCenter">
+					<a href="#" class="button inline mw260 gray">Build and Find</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid testimonials-block" ng-controller="MainCtrl.testimonialslider">
+		<div class="row">
+			<div class="container">
+				<h2 class="title tCenter dark mt2p mb5p">What our Customers are <span>Saying</span></h2>
+				<div class="testimonials__content" ng-repeat="(key, prop) in testimonials" ng-show="activeProperty == key">
+					<div class="col-md-12 padding-0" ng-repeat="item in prop">
+						<div class="element">
+							<i class="testimonials__icons __icons icon-carleasequote-simbol"></i>
+							<div class="element-inner">
+								<span>
+									{{ item.text1 }}
+								</span>
+								<p>
+									<b>- {{ item.note1 }}</b>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="arrow left">
+				<a href="#" ng-class="{'disabled': !activeProperty}" ng-click="changeProperty(-1)" class="icon-carleasearrow-left-1"></a>
+			</div>
+
+			<div class="arrow right">
+				<a href="#" ng-class="{'disabled': activeProperty == testimonials.length - 1}" ng-click="changeProperty(1)" class="icon-carleasearrow-right-1"></a>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container-fluid companies-block">
+		<div class="row company-row">
+			<div class="container mb5p">
+				<h2 class="title tCenter dark mt2p mb5p">Who we have<span>worked with</span></h2>
+				<change-logos images="images" />
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer container-fluid">
+		<div class="row">
+			<div class="container">
+				<div class="col-sm-15 col-sm-push-9 col-xs-24 xs-top">
+					<div class="col-sm-8 col-xs-8">
+						<ul class="list-unstyled footer__menu">
+							<li><a href="/about"><span>About us</span></a></li>
+							<li><a href="/what-we-do"><span>What we do</span></a></li>
+							<li><a href="/contact"><span>Contact us</span></a></li>
+						</ul>
+					</div>
+					<div class="col-sm-8 col-xs-8">
+						<ul class="list-unstyled footer__menu">
+							<li><a href="/explore"><span>Explore</span></a></li>
+							<li><a href="/request-quote"><span>Request a Quote</span></a></li>
+							<li><a href="/auth/login"><span>Sign in</span></a></li>
+						</ul>
+					</div>
+					<div class="col-sm-8 col-xs-8">
+						<ul class="list-unstyled footer__menu">
+							<li><a href="/how-it-works"><span>How it Work</span></a></li>
+							<li><a href="/faq"><span>FAQ</span></a></li>
+							<li><a href="/terms"><span>Terms and Conditions</span></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-9 col-xs-24 col-sm-pull-15 xs-bottom">
+					<div class="footer__socials">
+						<a class="facebook" href="#"><i class="icons icon-carleasefacebook"></i></a>
+						<a class="linkedin" href="#"><i class="icons icon-carleaselinkedin"></i></a>
+						<a class="twitter" href="#"><i class="icons icon-carleasetwitter"></i></a>
+					</div>
+					<div class="copyright">
+						<span>© 2014 Carlease.com, LLC | A Sperling Co.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+
+

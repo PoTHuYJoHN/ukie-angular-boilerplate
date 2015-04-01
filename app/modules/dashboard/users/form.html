@@ -1,0 +1,24 @@
+<form method="post" role="form" ng-submit="saveItem(item);" name="forms.edit">
+
+	<form-group input="name">
+		<label for="name">Name</label>
+		<input ng-model="item.name" type="text" class="form-control input-lg" name="name" id="name">
+	</form-group>
+
+	<form-group input="email">
+		<label for="email">E-mail</label>
+		<input ng-model="item.email" type="email" class="form-control input-lg" name="email" id="email">
+	</form-group>
+
+	<form-group input="role_id">
+		<label for="role_id">Role</label>
+		<select required="required" ng-model="item.role_id" class="form-control input-lg" name="email" id="role_id"
+			ng-options="key as value for (key,value) in roles">
+		</select>
+	</form-group>
+
+	<div class="row">
+		<button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>
+	</div>
+
+</form>

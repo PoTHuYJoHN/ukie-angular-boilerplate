@@ -1,0 +1,80 @@
+<div class="aside aside--left" ng-show="isNav == true">
+	<ul class="site-nav list-unstyled bgGray">
+		<li ng-class="{ active: state.current.name == 'auth_login'}" class="site-nav-item site-account">
+			<a href="/auth/login" class="cWhite tUp icon-carleasekey">
+				<span>Sign in</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'page_how_it_works'}" class="site-nav-item">
+			<a href="/how-it-works" class="cWhite tUp icon-carleasehowitswork">
+				<span>How it works</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'explore' || state.includes('explore.*')}" class="site-nav-item">
+			<a ui-sref="explore.search" class="cWhite tUp icon-carleaseexplore">
+				<span>Explore</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'page_request_quote'}" class="site-nav-item">
+			<a href="/request-quote" class="cWhite tUp icon-carleasequote-mail">
+				<span>Request a quote</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'page_faq'}" class="site-nav-item">
+			<a href="/faq" class="cWhite tUp icon-carleasefaq">
+				<span>Faq</span>
+			</a>
+		</li>
+	</ul>
+
+	<ul class="site-nav list-unstyled smallIcon">
+		<li ng-class="{ active: state.current.name == 'page_about'}" class="site-nav-item">
+			<a href="/about" class="icon-carleasearrow-menu-li">
+				<span>About us</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'page_what_we_do'}" class="site-nav-item">
+			<a href="/what-we-do" class="icon-carleasearrow-menu-li">
+				<span>What we do</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'page_fleet'}" class="site-nav-item">
+			<a href="/" class="icon-carleasearrow-menu-li">
+				<span>Fleet Analysis</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'page_contact'}" class="site-nav-item">
+			<a href="/contact" class="icon-carleasearrow-menu-li">
+				<span>Contact us</span>
+			</a>
+		</li>
+	</ul>
+
+	<ul class="site-nav list-unstyled smallIcon">
+		<li ng-class="{ active: state.current.name == 'page_careers'}" class="site-nav-item">
+			<a href="/" class="icon-carleasearrow-menu-li">
+				<span>Careers</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'page_press'}" class="site-nav-item">
+			<a href="/" class="icon-carleasearrow-menu-li">
+				<span>Press</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'page_blog' || state.includes('page_blog.*')}" class="site-nav-item">
+			<a href="/" class="icon-carleasearrow-menu-li">
+				<span>Blog</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'page_affinity'}" class="site-nav-item">
+			<a href="/" class="icon-carleasearrow-menu-li">
+				<span>Affinity Program</span>
+			</a>
+		</li>
+		<li ng-class="{ active: state.current.name == 'page_terms'}" class="site-nav-item">
+			<a href="/terms" class="icon-carleasearrow-menu-li">
+				<span>Terms and Conditions</span>
+			</a>
+		</li>
+	</ul>
+</div>

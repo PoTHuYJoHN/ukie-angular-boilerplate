@@ -1,0 +1,5 @@
+<ul ng-if="$parent.$parent.$parent.formErrors[name]" class="form-errors" >
+	<li ng-repeat="error in $parent.$parent.$parent.$parent.formErrors[name]">
+		<label ng-bind="error"></label>
+	</li>
+</ul>

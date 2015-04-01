@@ -1,0 +1,17 @@
+<ul class="nav nav-pills nav-stacked">
+	<li role="presentation" ng-class="{ active: state.current.name == 'dashboard'}"><a ui-sref="dashboard">Dashboard</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('settings.*') || state.current.name == 'settings'}"><a ui-sref="settings.list">Settings</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('home.*') || state.current.name == 'home'}"><a ui-sref="home.edit({token:'home'})">Home page</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('testimonials.*') || state.current.name == 'testimonials'}"><a ui-sref="testimonials.list({ parentId:'6'})">Testimonials</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('faq.*') || state.current.name == 'faq'}"><a ui-sref="faq.list({ parentId:'7'})">Faq</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('howitworks.*') || state.current.name == 'howitworks'}"><a ui-sref="howitworks.edit({token:'how-it-works'})">How it works</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('howsteps.*') || state.current.name == 'howsteps'}"><a ui-sref="howsteps.list({ parentId:'5'})">How it works steps</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('about.*') || state.current.name == 'about'}"><a ui-sref="about.edit({token:'about-us'})">About</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('teammembers.*') || state.current.name == 'teammembers'}"><a ui-sref="teammembers.list({ parentId:'1'})">Team members</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('quote.*') || state.current.name == 'quote'}"><a ui-sref="quote.edit({token:'request-quote'})">Request a quote</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('whatwedo.*') || state.current.name == 'whatwedo'}"><a ui-sref="whatwedo.edit({token:'what-we-do'})">What we do</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('terms.*') || state.current.name == 'terms'}"><a ui-sref="terms.edit({token:'terms'})">Terms and conditions</a></li>
+	<li role="presentation" ng-class="{ active: state.includes('contact.*') || state.current.name == 'contact'}"><a ui-sref="contact.edit({token:'contact'})">Contact</a></li>
+
+	<li role="presentation" ng-class="{ active: state.includes('users.*') || state.current.name == 'users'}"><a ui-sref="users.list">Users</a></li>
+</ul>

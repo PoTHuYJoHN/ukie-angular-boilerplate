@@ -1,0 +1,26 @@
+<div class="ng-gallery-list" ng-file-over="other-over-zone">
+
+	<div class="additional-photo" ng-hide="edit !== undefined && !edit"><?= t('additional_photo') ?></div>
+
+	<ul>
+		<!-- Uploader -->
+		<li class="upload" ng-hide="(files.length + uploader.queue.length) >= 10 || edit !== undefined && !edit">
+			<i class="fontello-icon icon-carleaseplus-circled"></i>
+			<label title="Upload file" class="button-upload" ng-class="{ 'loading' : progress }" for="gallery-{{ fileType }}" nv-file-drop uploader="uploader"></label>
+			<input id="gallery-{{ fileType }}" type="file" nv-file-select uploader="uploader" multiple />
+		</li>
+
+		<!-- Uploaded files -->
+		<li class="gallery-thumb" ng-repeat="file in files">
+			<img ng-src="{{ file.token | getCover : file.type : 'tiny' }}" alt="{{ file.name }}">
+			<span class="remove" ng-click="removeImage(file);" ng-hide="edit !== undefined && !edit">
+				<i class="fontello-icon icon-carleasetrash-empty"></i>
+			</span>
+		</li>
+
+		<!-- File queue -->
+		<li  class="gallery-thumb" ng-repeat="item in uploader.queue">
+			<img class="loading" src="/images/loading.gif">
+		</li>
+	</ul>
+</div>

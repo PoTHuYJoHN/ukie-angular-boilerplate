@@ -1,0 +1,6 @@
+<div class="element form-checkbox">
+	<input class="custombox" ng-if="($parent.editMode !== false && $parent.editMode !== true) || $parent.editMode" type="checkbox" class="checkbox" ng-model="$parent.model" ng-true-value="'1'" ng-false-value="'0'" />
+	<label ng-if="label">{{::label }}</label>
+	<div class="value" ng-if="$parent.editMode === false">{{ $parent.model == 1 ? "Yes" : "No" }}</div>
+	<div ng-include src="'/app/views/form/errors.html'"></div>
+</div>

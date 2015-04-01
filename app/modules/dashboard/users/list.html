@@ -1,0 +1,11 @@
+<h1>Users</h1>
+
+<button type="button" class="btn btn-default btn-lg" ui-sref="users.create">
+	<span>+</span>Add new item
+</button>
+
+<div style="margin-top: 40px;">
+	<div class="list-group" ng-repeat="item in items">
+		<div ng-include="'/app/modules/dashboard/users/list-item.html'"></div>
+	</div>
+</div>

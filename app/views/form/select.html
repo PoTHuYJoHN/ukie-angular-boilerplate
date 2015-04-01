@@ -1,0 +1,9 @@
+<div class="element form-input">
+	<label ng-if="label">{{::label }} {{ required != null ? "*" : "" }}:</label>
+	<div ng-if="($parent.editMode !== false && $parent.editMode !== true) || $parent.editMode">
+		<select ng-model="$parent.model" ng-options="item.key as item.value for item in options"></select>
+
+		<div ng-include src="'/app/views/form/errors.html'"></div>
+	</div>
+	<div class="value" ng-if="$parent.editMode === false">{{ $parent.selectValue }}</div>
+</div>

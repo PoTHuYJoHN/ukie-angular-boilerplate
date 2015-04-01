@@ -1,0 +1,21 @@
+<form role="form" ng-submit="saveAllItems(items);">
+	<div ng-repeat="item in items">
+		<div ng-if="item.type == 'textbox'">
+			<form-group input="key">
+				<label for="{{ item.key }}">{{ item.label }}</label>
+				<input ng-model="item.value" type="text" class="form-control input-lg" id="{{ item.key }}">
+			</form-group>
+		</div>
+
+		<div ng-if="item.type == 'textarea'">
+			<form-group input="key">
+				<label for="{{ item.key }}">{{ item.label }}</label>
+				<textarea ng-model="item.value" class="form-control input-lg ckeditor" id="{{ item.key }}"></textarea>
+			</form-group>
+		</div>
+	</div>
+
+	<div class="row">
+		<button type="submit" class="btn btn-primary btn-lg btn-block">Save</button>
+	</div>
+</form>

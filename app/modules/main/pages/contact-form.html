@@ -1,0 +1,48 @@
+<form class="form-contact" method="post" role="form" ng-submit="sendMessage(message);" name="forms.contact">
+	<fieldset>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-md-12">
+					<label>
+						Name:
+					</label>
+					<custom-input required model="message.name" name="name"></custom-input>
+				</div>
+				<div class="col-md-12">
+					<label>
+						Phone:
+					</label>
+					<custom-input required model="message.phone" name="phone"></custom-input>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="row">
+				<div class="col-md-12">
+					<label>
+						Email:
+					</label>
+					<custom-input required model="message.email" name="email"></custom-input>
+				</div>
+				<div class="col-md-12">
+					<label>
+						Zip:
+					</label>
+					<custom-input required model="message.zip" name="zip"></custom-input>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label>
+				Write your message:
+			</label>
+			<custom-textarea required model="message.comment" name="comment"></custom-textarea>
+		</div>
+
+		<div class="form-group floatRight">
+			<button type="submit" class="button inline invertgray">Send message</button>
+		</div>
+	</fieldset>
+</form>

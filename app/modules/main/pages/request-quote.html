@@ -1,0 +1,42 @@
+<div id="js-parallax-window" class="parallax-window">
+	<div class="parallax-static-content">
+		<h1 class="title ">Request a<span>Quote</span></h1>
+	</div>
+	<div class="overlay"></div>
+	<div id="js-parallax-background" class="parallax-background request"></div>
+</div>
+
+<main role="main">
+	<section class="mt3p">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-24">
+					<div class="element">
+						<p class="line__p" ng-bind-html="page.main_text"></p>
+						<b>
+							Please, choose a car you want to be quoted in the Explore section
+						</b>
+					</div>
+				</div>
+
+				<div class="col-xs-24 textCenter mt5p">
+					<a class="button inline mw260 invertgray" href="#">Explore</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<script>
+	$(document).ready(function() {
+		if ($("#js-parallax-window").length) {
+			parallax();
+		}
+	});
+
+	$(window).scroll(function(e) {
+		if ($("#js-parallax-window").length) {
+			parallax();
+		}
+	});
+</script>

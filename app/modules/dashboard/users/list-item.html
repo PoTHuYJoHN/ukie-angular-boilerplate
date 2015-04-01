@@ -1,0 +1,7 @@
+<a ui-sref="users.edit({id:item.id})" class="list-group-item">
+	<h4 class="list-group-item-heading">{{ item.name }}</h4>
+	<a ui-sref="users.changePassword({id:item.id})">change password</a>
+	<a class="pointer" ng-really-message="Are you sure?" ng-really-click="removeItem(item)">Remove</a>
+</a>
+
+

@@ -1,0 +1,5 @@
+<div class="slider">
+	<div class="slide fade" ng-repeat="image in images" ng-class="{'active' : image.visible == true}">
+		<div class="background-full" style="background-image: url('/images/slideshow/{{image.src}}')"></div>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+<div class="overlay"></div>
+<div class="container-fluid page-wrap">
+	<div class="row">
+		<div class="container">
+			<h1 class="title tCenter mt2p mb5p">Register in <span>Carlease</span></h1>
+			<div class="col-md-offset-4 col-md-16 padding-0">
+				<form class="form-horizontal" role="form" ng-submit="register(user)">
+					<fieldset>
+
+						<div class="col-md-24">
+							<div class="form-group">
+								<label class="control-label">Name</label>
+								<custom-input type="text" required model="user.name" name="name"></custom-input>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label">E-Mail Address</label>
+								<custom-input type="email" required model="user.email" name="email"></custom-input>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label">Password</label>
+								<custom-input type="password" required model="user.password" name="password"></custom-input>
+							</div>
+
+							<div class="form-group">
+								<label class="control-label">Confirm password</label>
+								<custom-input type="password" required model="user.password_confirmation" name="password_confirmation"></custom-input>
+							</div>
+
+							<div class="form-group">
+								<button type="submit" class="button inline blue w100p">
+									Register
+								</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+

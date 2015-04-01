@@ -1,0 +1,8 @@
+<a ui-sref="faq.edit({id:item.id})" class="list-group-item">
+	<h4 class="list-group-item-heading">{{ item.question }}</h4>
+	<p class="list-group-item-text">{{ item.answer }}</p>
+
+	<a class="pointer" ng-really-message="Are you sure?" ng-really-click="removeItem(item.id)">Remove</a>
+</a>
+
+

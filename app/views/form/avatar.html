@@ -1,0 +1,22 @@
+<div class="add-avatar" ng-class="{edit: editmode !== false}">
+	<div ng-if="(editmode !== false && editmode !== true) || editmode" ng-file-over="other-over-zone">
+		<label class="thumb" for="image-{{ fileType }}" nv-file-drop uploader="uploader" >
+			<img width="100%" ng-src="{{ src }}" alt="" />
+		</label>
+		<div class="actions">
+			<div ng-if="progress" class="progress-bar" style="width: {{ progress }}%"></div>
+
+			<a class="button-close" ng-if="parent.coverToken" ng-click="remove()" href="">&times;</a>
+			<a style="float: right; margin: 6px 10px 0 0" ng-if="parent.coverToken && cropEnable" ng-click="cropInit()" href="">Crop</a>
+
+			<label title="Upload file" class="button-upload" ng-class="{ 'loading' : progress }" for="image-{{ fileType }}" nv-file-drop uploader="uploader">
+				<span>&darr;</span>
+				Upload
+				<input id="image-{{ fileType }}" type="file" nv-file-select uploader="uploader" />
+			</label>
+		</div>
+	</div>
+	<label class="thumb" ng-if="editmode === false" >
+		<img width="100%" ng-src="{{ src }}" alt="" />
+	</label>
+</div>

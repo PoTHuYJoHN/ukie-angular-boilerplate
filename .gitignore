@@ -1,0 +1,5 @@
+/node_modules
+.idea/*
+*.sh
+.DS_Store
+.sass-cache

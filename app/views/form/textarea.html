@@ -1,0 +1,8 @@
+<div class="element form-textarea" ng-show="show!==undefined ? show : true">
+	<label ng-if="label">{{::label }} {{ required != null ? "*" : "" }}:</label>
+	<div ng-if="($parent.editMode !== false && $parent.editMode !== true) || $parent.editMode">
+		<textarea ng-model="$parent.model"></textarea>
+		<div ng-include src="'/app/views/form/errors.html'"></div>
+	</div>
+	<div ng-if="$parent.editMode === false" class="value" ng-bind-html="$parent.model"></div>
+</div>

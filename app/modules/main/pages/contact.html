@@ -1,0 +1,32 @@
+<div class="overlay"></div>
+<div class="container-fluid page-wrap">
+	<div class="row">
+		<div class="container">
+			<h1 class="title tCenter mt2p mb5p">Contact <span>Us</span></h1>
+			<div class="col-md-7 padding-0">
+				<div class="form__address--innner">
+					<h3>Address</h3>
+					<p ng-bind-html="page.address_title"></p>
+					<p ng-bind-html="page.address_text"></p>
+
+					<div class="border"></div>
+					<h3>How to Reach Us</h3>
+					<p>
+						<b>Email: </b><a href="mailto:{{ settings.email }}">{{ settings.email }}</a>
+					</p>
+
+					<p>
+						<b>Phone: </b><a href="tel:{{ settings.phone }}">{{ settings.phone }}</a>
+					</p>
+
+					<p>
+						<b>Fax: </b><a href="tel:{{ settings.fax }}">{{ settings.fax }}</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-offset-1 col-md-16 padding-0">
+				<div ng-include="'/app/modules/main/pages/contact-form.html'"></div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<form method="post" role="form" ng-submit="saveItem(item);" name="forms.formAdd">
+
+	<!--- Question Field --->
+	<div class="row">
+		<form-group input="question">
+			<label for="question">Type question</label>
+			<input ng-model="item.question" type="text" class="form-control input-lg" name="question" id="question">
+		</form-group>
+	</div>
+
+	<!--- Answer Field --->
+	<div class="row">
+		<form-group input="answer">
+			<label for="answer">Answer</label>
+			<textarea ng-model="item.answer" class="form-control input-lg" name="answer" id="answer"></textarea>
+		</form-group>
+	</div>
+
+	<div class="row">
+		<button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>
+	</div>
+
+</form>
