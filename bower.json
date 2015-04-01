@@ -1,0 +1,29 @@
+{
+  "name": "ukie-angular-boilerplate",
+  "version": "0.0.1",
+  "homepage": "https://github.com/PoTHuYJoHN/ukie-angular-boilerplate",
+  "authors": [
+    "Ivan Kolodiy <kolodiy.dev@gmail.com>"
+  ],
+  "description": "Angular boilerplate sceleton with basic functionality",
+  "main": "app/main.js",
+  "keywords": [
+    "angular",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.*",
+    "angular-ui-router": "~0.2.*",
+    "ckeditor": "~4.4.7",
+    "angular-file-upload": "~1.1.*",
+    "bootstrap-sass": "~3.3.3"
+  }
+}
